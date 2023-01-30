@@ -1,0 +1,48 @@
+---
+title: "Assignment 1"
+author: "Vallabhaneni Veera Manikanta"
+date: "2023-01-28"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+
+```{r Basket Ball}
+###### Basketball Data Set Source #######
+Basketball=read.csv("C:/Users/13304/Desktop/College Basketball Dataset.csv")
+
+###### Printing Data ######
+print(Basketball)
+
+###### mean of variable "G" ###### 
+mean(Basketball$G)
+
+###### mean of variable "W" ######
+mean(Basketball$W)
+
+
+########## Plot the chart for Basketball Data set for 2 Variables ##########
+########### Matches Played Between 15 to 40 #########
+##########  Matches won between 0 to 40 ############
+plot(x = Basketball$G,y = Basketball$W,
+     xlab = "Matches Played",
+     ylab = "Matches Won",
+     main = "College Basketball Dataset"
+)
+########### Historical Graph for Basket ball Dataset ##################
+str(Basketball)
+Basketball$G -> Games
+hist(Games,ylim=c(0,80))
+
+```
+
